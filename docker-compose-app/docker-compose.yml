@@ -1,0 +1,14 @@
+# 도커 컴포즈 버전
+version: "3"
+# 실행하려는 컨테이너 정의
+services:
+  # 컨테이너 이름
+  redis-server:
+    # 컨테이너에서 사용하는 이미지 이름
+    image: "redis"
+  node-app:
+    # 사용하는 Dockerfile 위치
+    build: ./
+    # 포트 맵핑 {로컬 포트}:{컨테이터 포트}
+    ports:
+      - "3000:3000"
