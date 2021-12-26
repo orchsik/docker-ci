@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -15,7 +15,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          22 Learn React - {process.env.NODE_ENV} -
+          {process.env.CHOKIDAR_USEPOLLING ? "ㅋㅋ" : "ㅠㅠ"}
         </a>
       </header>
     </div>
