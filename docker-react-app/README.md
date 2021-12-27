@@ -1,4 +1,4 @@
-## docker run command
+## [개발] docker run command
 
 ```cmd
 docker run ^
@@ -9,4 +9,17 @@ docker run ^
   --env CHOKIDAR_USEPOLLING=true ^
   --rm ^
   react
+```
+
+## [개발 + docker-compose] docker run command
+
+```bash
+docker-compose up --build
+```
+
+## [운영] docker run command
+
+```bash
+# 80포트는 Nginx의 기본 포트.
+docker run --publish 3000:80 {이미지이름}
 ```

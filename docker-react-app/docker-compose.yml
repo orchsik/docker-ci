@@ -1,0 +1,18 @@
+# docker-compose 버전
+version: "3"
+# 실행하려는 컨테이너들
+services:
+  # 컨테이너 이름
+  react:
+    build:
+      # 도커 이미지 구성을 위한 파일과 폴더들 위치
+      context: .
+      # 도커파일 지정
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - /usr/src/app/node_modules
+      - ./:/usr/src/app
+    # 리액트 앱 종료시 필요
+    stdin_open: true
