@@ -8,17 +8,17 @@ app.use(bodyParser.json());
 
 const PORT = 5000;
 
-// 테이블 생성하기
-db.pool.query(
-  `CREATE TABLE lists (
-    id INTEGER AUTO_INCREMENT,
-    value TEXT, 
-    PRIMARY KEY (id)
-)`,
-  (err, results, fileds) => {
-    console.log({ results });
-  }
-);
+// // 테이블 생성하기
+// db.pool.query(
+//   `CREATE TABLE lists (
+//     id INTEGER AUTO_INCREMENT,
+//     value TEXT,
+//     PRIMARY KEY (id)
+// )`,
+//   (err, results, fileds) => {
+//     console.log({ results });
+//   }
+// );
 
 app.get("/api/hi", function (req, res) {
   res.status(200).send("good");
